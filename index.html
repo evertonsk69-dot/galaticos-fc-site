@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <title>Galáticos Futebol Clube | Site Oficial</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       TOPO
+  ========================== -->
+
+  <header class="topbar">
+
+    <a class="brand" href="#inicio">
+      <img src="logo-galaticos.png" alt="Escudo Galáticos Futebol Clube">
+      <span>GALÁTICOS FC</span>
+    </a>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Abrir menu"
+      type="button">
+      ☰
+    </button>
+
+    <nav id="mainNav">
+
+      <a href="#inicio">Início</a>
+      <a href="#jogos">Jogos</a>
+      <a href="#estatisticas">Estatísticas</a>
+      <a href="#elenco">Elenco</a>
+      <a href="#historia">História</a>
+      <a href="#midias">Mídia</a>
+      <a href="#galaticostv">Galáticos TV</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#loja">Loja</a>
+      <a href="#contato">Contato</a>
+
+    </nav>
+
+  </header>
+<!-- =====================================================
+     CONTADOR DE VISITANTES + MASCOTE GALÁTICOS
+===================================================== -->
+
+<section class="visitor-panel" id="visitantes">
+
+  <div class="visitor-container">
+
+    <!-- CONTADOR -->
+
+    <div class="visitor-info">
+
+      <span class="visitor-eyebrow">
+        GALÁTICOS FUTEBOL CLUBE
+      </span>
+
+      <h2>
+        BEM-VINDO AO
+        <strong>GALÁTICOS</strong>
+      </h2>
+
+      <p>
+        Você é o visitante número
+      </p>
+
+      <div
+        class="visitor-number"
+        id="visitorCount"
+      >
+        000000
+      </div>
+
+      <span class="visitor-label">
+        VISITANTES DO SITE
+      </span>
+
+    </div>
+
+
+    <!-- =================================================
+         ÁREA DA ANIMAÇÃO
+    ================================================== -->
+
+    <div
+      class="mascot-stadium"
+      aria-label="Mascote Galáticos chutando uma bola no gol"
+    >
+
+      <!-- CAMPO -->
+
+      <div class="field-line"></div>
+
+
+      <!-- GOL -->
+
+      <div class="football-goal">
+
+        <div class="goal-crossbar"></div>
+
+        <div class="goal-post left"></div>
+
+        <div class="goal-post right"></div>
+
+        <div class="goal-net"></div>
+
+      </div>
+
+
+      <!-- BOLA -->
+
+      <div
+        class="mascot-ball"
+        id="mascotBall"
+      >
+        ⚽
+      </div>
+
+
+      <!-- MASCOTE -->
+
+      <img
+        class="galaticos-mascot"
+        src="mascote-galaticos.png"
+        alt="Mascote Galáticos"
+      >
+
+
+      <!-- TEXTO GOL -->
+
+      <div
+        class="mascot-goal-text"
+        id="mascotGoalText"
+      >
+        GOOOOOL!
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <img src="logo-galaticos.png" alt="Galáticos FC">
+        </div>
+
+        <p class="eyebrow">
+          GALÁTICOS FUTEBOL CLUBE
+        </p>
+
+        <h1>
+          GALÁTICOS <span>ATÉ MORRER.</span>
+        </h1>
+
+        <p class="hero-text">
+          Acompanhe os jogos, resultados, artilharia, assistências
+          e tudo que acontece dentro e fora de campo.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="btn primary" href="#jogos">
+            Ver calendário
+          </a>
+
+          <a class="btn secondary" href="#estatisticas">
+            Ver estatísticas
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NÚMEROS DA TEMPORADA
+    ========================== -->
+
+    <section class="section stats-overview">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            TEMPORADA
+          </p>
+
+          <h2>
+            Números do Galáticos
+          </h2>
+
+        </div>
+
+        <span class="live-dot">
+          ● ATUALIZÁVEL
+        </span>
+
+      </div>
+
+      <div
+        class="overview-grid"
+        id="overviewGrid">
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         JOGOS
+    ========================== -->
+
+    <section class="section" id="jogos">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            AGENDA
+          </p>
+
+          <h2>
+            Calendário de jogos
+          </h2>
+
+        </div>
+
+        <select
+          id="competitionFilter"
+          class="filter">
+
+          <option value="Todos">
+            Todas as competições
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- Os jogos serão inseridos pelo JavaScript -->
+
+      <div
+        class="matches"
+        id="matches">
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ESTATÍSTICAS
+    ========================== -->
+
+    <section
+      class="section dark-section"
+      id="estatisticas">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            DESEMPENHO
+          </p>
+
+          <h2>
+            Estatísticas individuais
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="stats-columns">
+
+
+        <!-- ARTILHEIROS -->
+
+        <div class="card table-card">
+
+          <div class="card-title">
+
+            <span>⚽</span>
+
+            <h3>
+              Artilheiros
+            </h3>
+
+          </div>
+
+          <div id="scorers"></div>
+
+        </div>
+
+
+        <!-- ASSISTÊNCIAS -->
+
+        <div class="card table-card">
+
+          <div class="card-title">
+
+            <span>🎯</span>
+
+            <h3>
+              Assistências
+            </h3>
+
+          </div>
+
+          <div id="assists"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ELENCO
+    ========================== -->
+
+    <section
+      class="section"
+      id="elenco">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            TIME
+          </p>
+
+          <h2>
+            Elenco
+          </h2>
+
+        </div>
+
+
+        <input
+          id="playerSearch"
+          class="search"
+          type="search"
+          placeholder="Buscar jogador...">
+
+      </div>
+
+
+      <div
+        class="players"
+        id="players">
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MÍDIA
+    ========================== -->
+
+    <section
+      class="section social-section"
+      id="midias">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            MÍDIA OFICIAL
+          </p>
+
+          <h2>
+            Acompanhe o Galáticos
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="social-grid">
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="social-card instagram"
+          href="https://www.instagram.com/galaticos431?stkn=ZDNlZDc0MzIxNw=="
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="social-icon">
+            ◎
+          </div>
+
+          <div>
+
+            <span class="social-label">
+              INSTAGRAM
+            </span>
+
+            <strong>
+              @galaticos431
+            </strong>
+
+            <small>
+              ACESSE AÍ →
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a
+          class="social-card youtube"
+          href="https://www.youtube.com/@tvgalaticosfc155"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="social-icon">
+            ▶
+          </div>
+
+          <div>
+
+            <span class="social-label">
+              YOUTUBE
+            </span>
+
+            <strong>
+              TV GALÁTICOS FC
+            </strong>
+
+            <small>
+              ACESSE AÍ →
+            </small>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         GALÁTICOS TV — TRANSMISSÃO AO VIVO
+    ========================== -->
+    <section class="section galaticos-tv-section" id="galaticostv">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TRANSMISSÃO OFICIAL</p>
+          <h2>Galáticos TV</h2>
+        </div>
+      </div>
+
+      <div class="galaticos-tv-card">
+        <div class="galaticos-tv-live">● AO VIVO</div>
+        <div class="galaticos-tv-copy">
+          <h3>ASSISTA AOS JOGOS DO GALÁTICOS FC</h3>
+          <p>Quando houver transmissão, entre na Galáticos TV para acompanhar a partida pelo canal oficial de jogos do clube.</p>
+          <a class="btn primary galaticos-tv-btn" href="https://galaticos-tv-estudio.velideeeee.chatgpt.site/assistir.html?id=57d13eff10294b01" target="_blank" rel="noopener noreferrer">▶ ASSISTIR TRANSMISSÃO →</a>
+        </div>
+        <div class="galaticos-tv-mark">GALÁTICOS <span>TV</span></div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         UNIFORMES
+    ========================== -->
+
+    <section
+      class="section uniforms-section"
+      id="uniformes">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            IDENTIDADE
+          </p>
+
+          <h2>
+            Uniformes do Galáticos
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="uniform-slider">
+
+
+        <button
+          class="slide-btn prev"
+          id="uniformPrev"
+          aria-label="Uniforme anterior"
+          type="button">
+          ‹
+        </button>
+
+
+        <div
+          class="slides"
+          id="uniformSlides">
+
+          <div class="uniform-slide active">
+
+            <div class="uniform-placeholder">
+
+              <img
+                src="vestiario-galaticos.png"
+                alt="Vestiário Galáticos">
+
+              <div>
+
+                <strong>
+                  UNIFORMES GALÁTICOS
+                </strong>
+
+                <span>
+                  As fotos dos uniformes serão exibidas aqui.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="slide-btn next"
+          id="uniformNext"
+          aria-label="Próximo uniforme"
+          type="button">
+          ›
+        </button>
+
+
+        <div
+          class="dots"
+          id="uniformDots">
+        </div>
+
+      </div>
+
+
+      <p class="upload-note">
+
+        Para colocar as fotos dos uniformes,
+        coloque os arquivos na mesma pasta do site
+        e adicione os nomes no arquivo
+        <strong>script.js</strong>.
+
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         LOJA GALÁTICOS
+    ========================== -->
+    <section class="section store-section" id="loja">
+      <div class="section-heading">
+        <div><p class="eyebrow">LOJA OFICIAL</p><h2>Vista o Galáticos</h2></div>
+        <span class="store-badge">🛒 CAMISETAS DO CLUBE</span>
+      </div>
+
+      <div class="store-toolbar" id="produtos-loja">
+        <div><strong>CAMISETAS GALÁTICOS</strong><small>Confira os modelos oficiais disponíveis</small></div>
+        <span class="store-safe">⚽ #GalaticosAteMorrer</span>
+      </div>
+
+      <div class="store-slider" aria-label="Modelos de camisetas do Galáticos">
+        <button class="store-slide-btn store-prev" id="storePrev" type="button" aria-label="Camiseta anterior">‹</button>
+        <div class="store-slides" id="storeSlides">
+          <article class="store-slide active"><img src="loja-modelo-branco-polo.png" alt="Camiseta Galáticos branca polo" loading="eager"><div class="store-slide-info"><small>GALÁTICOS STORE</small><h3>Modelo Branco Polo</h3><p><strong>Tamanhos:</strong> do 6 ao G3</p><a href="#contato" class="product-buy">QUERO COMPRAR →</a></div></article>
+          <article class="store-slide"><img src="loja-modelo-branco-v.png" alt="Camiseta Galáticos branca gola V" loading="lazy"><div class="store-slide-info"><small>GALÁTICOS STORE</small><h3>Modelo Branco Gola V</h3><p><strong>Tamanhos:</strong> do 6 ao G3</p><a href="#contato" class="product-buy">QUERO COMPRAR →</a></div></article>
+          <article class="store-slide"><img src="loja-modelo-preto-listrado.png" alt="Camiseta Galáticos preta listrada" loading="lazy"><div class="store-slide-info"><small>GALÁTICOS STORE</small><h3>Modelo Preto Listrado</h3><p><strong>Tamanhos:</strong> do 6 ao G3</p><a href="#contato" class="product-buy">QUERO COMPRAR →</a></div></article>
+          <article class="store-slide"><img src="loja-modelo-preto-polo.png" alt="Camiseta Galáticos preta polo" loading="lazy"><div class="store-slide-info"><small>GALÁTICOS STORE</small><h3>Modelo Preto Polo</h3><p><strong>Tamanhos:</strong> do 6 ao G3</p><a href="#contato" class="product-buy">QUERO COMPRAR →</a></div></article>
+          <article class="store-slide"><img src="loja-modelo-preto-v.png" alt="Camiseta Galáticos preta gola V" loading="lazy"><div class="store-slide-info"><small>GALÁTICOS STORE</small><h3>Modelo Preto Gola V</h3><p><strong>Tamanhos:</strong> do 6 ao G3</p><a href="#contato" class="product-buy">QUERO COMPRAR →</a></div></article>
+          <article class="store-slide"><img src="loja-modelo-rubro-negro-polo.png" alt="Camiseta Galáticos rubro-negra polo" loading="lazy"><div class="store-slide-info"><small>GALÁTICOS STORE</small><h3>Modelo Rubro-Negro Polo</h3><p><strong>Tamanhos:</strong> do 6 ao G3</p><a href="#contato" class="product-buy">QUERO COMPRAR →</a></div></article>
+        </div>
+        <button class="store-slide-btn store-next" id="storeNext" type="button" aria-label="Próxima camiseta">›</button>
+        <div class="store-dots" id="storeDots" aria-label="Selecionar camiseta"></div>
+      </div>
+      <p class="store-note">Passe pelos modelos usando as setas. O slide também troca automaticamente.</p>
+    </section>
+
+    <!-- =========================
+         GALERIA DE FOTOS
+    ========================== -->
+    <section class="section gallery-section" id="galeria">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FOTOS DO GALÁTICOS</p>
+          <h2>Galeria</h2>
+        </div>
+        <span class="gallery-badge">📸 ÁLBUNS OFICIAIS</span>
+      </div>
+
+      <div class="gallery-portal" id="galleryPortal" tabindex="0" role="button" aria-label="Entrar na galeria de fotos">
+        <img src="vestiario-galaticos.png" alt="Entrada da galeria do Galáticos" loading="lazy">
+        <div class="gallery-portal-overlay">
+          <span class="gallery-portal-kicker">📸 GALERIA OFICIAL</span>
+          <h3>FOTOS DO GALÁTICOS</h3>
+          <p>Clique para entrar e ver os álbuns separados por jogos e eventos.</p>
+          <span class="gallery-portal-button">ENTRAR NA GALERIA →</span>
+        </div>
+      </div>
+
+      <div class="album-browser" id="albumBrowser" hidden>
+        <div class="album-browser-head">
+          <button class="gallery-back" id="galleryHome" type="button">← VOLTAR À GALERIA</button>
+          <div><h3>ÁLBUNS</h3><p>Escolha uma pasta para ver todas as fotos.</p></div>
+        </div>
+        <div class="album-page-cover"><img src="capa-galeria.jpg" alt="Foto oficial do Galáticos FC — capa da área de álbuns" loading="lazy"><div class="album-page-cover-label">GALÁTICOS FC <span>ÁLBUNS DE FOTOS</span></div></div>
+        <div class="album-grid" id="albumGrid"></div>
+      </div>
+
+      <div class="gallery-view" id="galleryView" hidden>
+        <div class="gallery-view-head">
+          <button class="gallery-back" id="galleryBack" type="button">← VOLTAR AOS ÁLBUNS</button>
+          <h3 id="galleryTitle"></h3>
+          <p id="galleryCount"></p>
+        </div>
+        <div class="photo-grid" id="photoGrid"></div>
+      </div>
+    </section>
+
+    <div class="lightbox" id="photoLightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fechar">×</button>
+      <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Foto anterior">‹</button>
+      <figure>
+        <img id="lightboxImage" src="" alt="Foto ampliada">
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Próxima foto">›</button>
+    </div>
+
+<section class="section sponsors-section" id="patrocinadores">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PARCEIROS DO GALÁTICOS</p>
+          <h2>Patrocinadores Oficiais</h2>
+        </div>
+        <span class="sponsor-badge">APOIADORES DO GALÁTICOS FC</span>
+      </div>
+
+      <div class="sponsors-intro">
+        <h3>QUEM ACREDITA NO GALÁTICOS, FAZ PARTE DA NOSSA HISTÓRIA.</h3>
+        <p>Conheça as empresas que apoiam o Galáticos Futebol Clube.</p>
+      </div>
+
+      <div class="sponsors-grid">
+        <a class="sponsor-card" href="https://www.instagram.com/rjsport_s/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da Sou Mais RJ Sports">
+          <div class="sponsor-logo sponsor-logo-rj">
+            <img src="RJ SPORTS 3D.png" alt="Sou Mais RJ Sports">
+          </div>
+          <div class="sponsor-info">
+            <span>PATROCINADOR OFICIAL</span>
+            <h3>SOU MAIS RJ SPORTS</h3>
+            <p>@rjsport_s • Clique para visitar</p>
+          </div>
+          <div class="sponsor-arrow">→</div>
+        </a>
+
+        <a class="sponsor-card" href="https://www.instagram.com/gsjv__reforma_eletrica/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da GSJV Reforma Elétrica">
+          <div class="sponsor-logo sponsor-logo-gsjv">
+            <img src="LOGO 2SEM.png" alt="GSJV Reforma Elétrica">
+          </div>
+          <div class="sponsor-info">
+            <span>PATROCINADOR OFICIAL</span>
+            <h3>GSJV REFORMA ELÉTRICA</h3>
+            <p>@gsjv__reforma_eletrica • Clique para visitar</p>
+          </div>
+          <div class="sponsor-arrow">→</div>
+        </a>
+
+        <div class="sponsor-card sponsor-vacancy">
+          <div class="vacancy-icon">+</div>
+          <div class="sponsor-info">
+            <span>ESPAÇO DISPONÍVEL</span>
+            <h3>SUA MARCA AQUI</h3>
+            <p>Faça parte do Galáticos FC</p>
+          </div>
+          <div class="sponsor-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="sponsor-cta">
+        <div class="sponsor-cta-icon">🤝</div>
+        <div class="sponsor-cta-text">
+          <span>QUER APOIAR O GALÁTICOS?</span>
+          <h3>SUA MARCA TAMBÉM PODE ESTAR AQUI.</h3>
+          <p>Entre em contato com o clube para conhecer as opções de parceria.</p>
+        </div>
+        <a class="btn primary" href="#contato">SEJA PATROCINADOR →</a>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         HISTÓRIA
+    ========================== -->
+
+    <section
+      class="section story"
+      id="historia">
+
+      <div class="story-card">
+
+        <div>
+
+          <p class="eyebrow">
+            DESDE 2015
+          </p>
+
+          <h2>
+            Uma camisa. Uma família. Uma história.
+          </h2>
+
+          <p>
+            O Galáticos Futebol Clube Jardim Silveira nasceu
+            da amizade e da paixão pelo futebol.
+            Criado por Everton e Henrique, o clube fez sua
+            estreia em 05/07/2015 contra o Renegados Jardim Silveira.
+          </p>
+
+          <p>
+            Na estreia, o jogo terminou em 1x1 e Iranildo
+            marcou o primeiro gol da história do Galáticos.
+          </p>
+
+        </div>
+
+
+        <div class="story-photo">
+          <img src="historia-2015.jpg" alt="Foto histórica do Galáticos Futebol Clube em 2015">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section
+      class="section contact-section"
+      id="contato">
+
+      <div class="contact-card">
+
+        <div>
+
+          <p class="eyebrow">
+            FALE COM O CLUBE
+          </p>
+
+          <h2>
+            Contato dos responsáveis
+          </h2>
+
+          <p class="contact-intro">
+            Entre em contato com a organização do
+            Galáticos Futebol Clube para informações,
+            jogos, parcerias e assuntos do time.
+          </p>
+
+        </div>
+
+
+        <div class="contact-list">
+
+
+          <div class="contact-item">
+
+            <span>
+              RESPONSÁVEL
+            </span>
+
+            <strong>
+              Everton
+            </strong>
+
+            <small>
+              Contato: adicionar telefone/WhatsApp
+            </small>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <span>
+              RESPONSÁVEL
+            </span>
+
+            <strong>
+              Henrique
+            </strong>
+
+            <small>
+              Contato: adicionar telefone/WhatsApp
+            </small>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       MODAL / DETALHES DO JOGO
+  ========================== -->
+
+  <div
+    class="match-modal"
+    id="matchModal"
+    aria-hidden="true">
+
+    <div
+      class="match-modal-overlay"
+      id="matchModalOverlay">
+    </div>
+
+
+    <div
+      class="match-modal-content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="matchModalTitle">
+
+
+      <button
+        class="match-modal-close"
+        id="matchModalClose"
+        type="button"
+        aria-label="Fechar">
+        ×
+      </button>
+
+
+      <!-- CABEÇALHO -->
+
+      <div
+        class="match-detail-header"
+        id="matchDetailHeader">
+
+        <p
+          class="eyebrow"
+          id="detailCompetition">
+          COPA
+        </p>
+
+        <h2 id="matchModalTitle">
+          GALÁTICOS FC × ADVERSÁRIO
+        </h2>
+
+        <div
+          class="detail-phase"
+          id="detailPhase">
+          FASE DE GRUPOS
+        </div>
+
+      </div>
+
+
+      <!-- PLACAR -->
+
+      <div class="detail-scoreboard">
+
+        <div class="detail-team">
+
+          <img
+            src="logo-galaticos.png"
+            alt="Galáticos FC">
+
+          <strong id="detailHome">
+            GALÁTICOS FC
+          </strong>
+
+        </div>
+
+
+        <div class="detail-score">
+
+          <div
+            class="score-numbers"
+            id="detailScore">
+            -
+          </div>
+
+          <span
+            class="detail-status"
+            id="detailStatus">
+            PRÓXIMO
+          </span>
+
+        </div>
+
+
+        <div class="detail-team opponent">
+
+          <div class="opponent-logo">
+            ⚽
+          </div>
+
+          <strong id="detailAway">
+            ADVERSÁRIO
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMAÇÕES -->
+
+      <div class="detail-info">
+
+        <div>
+
+          <span>
+            📅 DATA
+          </span>
+
+          <strong id="detailDate">
+            -
+          </strong>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            ⏰ HORÁRIO
+          </span>
+
+          <strong id="detailTime">
+            -
+          </strong>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            📍 LOCAL
+          </span>
+
+          <strong id="detailVenue">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTEÚDO DA PARTIDA -->
+
+      <div
+        class="match-detail-body"
+        id="matchDetailBody">
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-brand">
+
+      <img
+        src="logo-galaticos.png"
+        alt="">
+
+      <div>
+
+        <strong>
+          GALÁTICOS FUTEBOL CLUBE
+        </strong>
+
+        <small>
+          #GalaticosAteMorrer
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <p>
+      Site oficial • Estatísticas e calendário
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
