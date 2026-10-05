@@ -476,10 +476,13 @@ function renderFixturesTable() {
         <div class="fixture-teams">
           <div class="fixture-team galaticos"><img src="${clubLogo}" alt="Galáticos FC"><strong>GALÁTICOS FC</strong></div>
           <span class="fixture-vs">VS</span>
-          <div class="fixture-team opponent"><div class="fixture-logo-empty">+</div><strong>PRÓXIMO ADVERSÁRIO</strong></div>
+          <div class="fixture-team opponent"><div class="fixture-logo-empty">+</div><strong>ADVERSÁRIO</strong></div>
         </div>
       </td>
-      <td>—</td><td>—</td><td>NOVO JOGO</td><td>—</td>
+      <td><span class="fixture-placeholder">DATA</span></td>
+      <td><span class="fixture-placeholder">HORÁRIO</span></td>
+      <td><span class="fixture-placeholder">COMPETIÇÃO</span></td>
+      <td><span class="fixture-placeholder">LOCAL</span></td>
     </tr>`;
 
   body.innerHTML = nextGameSpace + rows.map(x => `
@@ -507,6 +510,8 @@ function renderFixturesTable() {
 ========================================================= */
 
 function renderMatches(filter = "Todos") {
+  const matchesBox = $("matches");
+  if (!matchesBox) return;
 
   const list =
     filter === "Todos"
@@ -516,7 +521,7 @@ function renderMatches(filter = "Todos") {
         );
 
 
-  $("matches").innerHTML = list.length
+  matchesBox.innerHTML = list.length
 
     ? list.map(x => `
 
