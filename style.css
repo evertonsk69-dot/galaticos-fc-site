@@ -6003,3 +6003,13 @@ footer > p {
 #players .player-card.has-gallery{cursor:pointer;border-color:rgba(227,6,19,.55)}
 #players .player-card.has-gallery:hover{border-color:#e30613;box-shadow:0 10px 30px rgba(227,6,19,.13)}
 .athlete-gallery-hint{margin-top:14px;padding-top:11px;border-top:1px solid #2a2a2a;color:#e30613;font-size:.7rem;font-weight:900;letter-spacing:.06em}
+
+/* TABELA DE JOGOS */
+.fixtures-board{margin:0 0 34px;background:#0b0b0b;border:1px solid #292929;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.25)}
+.fixtures-board-title{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 24px;border-bottom:3px solid #d90018;background:linear-gradient(100deg,#111,#080808)}
+.fixtures-board-title span{display:block;color:#e30613;font-size:.7rem;font-weight:900;letter-spacing:.16em}.fixtures-board-title strong{display:block;color:#fff;font-size:1.35rem;margin-top:4px}.fixtures-board-title small{color:#999}
+.fixtures-table-wrap{overflow-x:auto}.fixtures-table{width:100%;border-collapse:collapse;min-width:900px}.fixtures-table th{padding:13px 16px;background:#171717;color:#aaa;font-size:.72rem;letter-spacing:.08em;text-align:center}.fixtures-table th:first-child{text-align:left}
+.fixtures-table td{padding:16px;border-bottom:1px solid #242424;color:#eee;text-align:center;font-weight:700}.fixtures-table td:first-child{text-align:left}.fixtures-table tr:last-child td{border-bottom:0}
+.fixture-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;min-width:360px}.fixture-team{display:flex;align-items:center;gap:9px}.fixture-team.opponent{justify-content:flex-start}.fixture-team img,.fixture-logo-empty{width:42px;height:42px;object-fit:contain}.fixture-logo-empty{display:grid;place-items:center;border:1px dashed #666;border-radius:50%;color:#888;font-size:20px;background:#171717}.fixture-vs{color:#e30613;font-weight:1000;font-size:1rem}.fixture-comp{display:inline-block;padding:7px 10px;border-radius:999px;background:#241014;color:#ff4558;font-size:.75rem}
+.fixture-next-slot{background:#fff}.fixture-next-slot td{color:#222;border-bottom:4px solid #d90018}.fixture-next-slot .fixture-vs{color:#d90018}.fixture-next-slot .fixture-logo-empty{background:#f3f3f3;border-color:#aaa;color:#777}.fixture-next-slot .fixture-comp{background:#eee;color:#333}
+@media(max-width:700px){.fixtures-board-title{align-items:flex-start;flex-direction:column}.fixtures-table th,.fixtures-table td{padding:12px 10px}}
