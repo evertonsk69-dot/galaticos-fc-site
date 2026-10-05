@@ -456,6 +456,53 @@ function renderOverview() {
 
 
 /* =========================================================
+   TABELA DE JOGOS — NOVOS JOGOS SEMPRE NO TOPO
+========================================================= */
+function renderFixturesTable() {
+  const body = $("fixturesTableBody");
+  if (!body) return;
+
+  const rows = [...data.matches].sort((a, b) => {
+    const parse = value => {
+      const p = (value || "").split("/");
+      return p.length === 3 ? new Date(+p[2], +p[1]-1, +p[0]).getTime() : 0;
+    };
+    return parse(b.date) - parse(a.date);
+  });
+
+  const nextGameSpace = `
+    <tr class="fixture-next-slot">
+      <td>
+        <div class="fixture-teams">
+          <div class="fixture-team galaticos"><img src="${clubLogo}" alt="Galáticos FC"><strong>GALÁTICOS FC</strong></div>
+          <span class="fixture-vs">VS</span>
+          <div class="fixture-team opponent"><div class="fixture-logo-empty">+</div><strong>PRÓXIMO ADVERSÁRIO</strong></div>
+        </div>
+      </td>
+      <td>—</td><td>—</td><td>NOVO JOGO</td><td>—</td>
+    </tr>`;
+
+  body.innerHTML = nextGameSpace + rows.map(x => `
+    <tr>
+      <td>
+        <div class="fixture-teams">
+          <div class="fixture-team galaticos"><img src="${clubLogo}" alt="Galáticos FC"><strong>GALÁTICOS FC</strong></div>
+          <span class="fixture-vs">${x.status === "Finalizado" && x.homeScore !== null ? x.homeScore + " × " + x.awayScore : "VS"}</span>
+          <div class="fixture-team opponent">
+            ${x.opponentLogo ? '<img src="' + x.opponentLogo + '" alt="' + x.away + '">' : '<div class="fixture-logo-empty">+</div>'}
+            <strong>${x.away}</strong>
+          </div>
+        </div>
+      </td>
+      <td>${x.date || "—"}</td>
+      <td>${x.time || "—"}</td>
+      <td><span class="fixture-comp">${x.competition || "—"}</span></td>
+      <td>${x.venue || "—"}</td>
+    </tr>
+  `).join("");
+}
+
+/* =========================================================
    RENDERIZA OS JOGOS
 ========================================================= */
 
@@ -1754,6 +1801,7 @@ function renderUniforms() {
 ========================================================= */
 
 renderOverview();
+  renderFixturesTable();
 
 fillFilter();
 
